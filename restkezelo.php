@@ -7,8 +7,8 @@ class restkezelo
     public function sethttpFejlec($statuskod)
     {
         $statusuzenet =  $this->gethttpStatusUzenet($statuskod);
-        header($this->httpVersion . " ". $statuskod
-        . " " . $statusuzenet)
+        header($this->httpversion. " ". $statuskod
+        . " " . $statusuzenet);
         header("Content-Type:Appliation/json; charset=utf-8");
     }
 
@@ -19,7 +19,7 @@ class restkezelo
             400 => 'Bad Request',
             404 => 'Not Found'
         );
-        return($httpStatus[$statuskod])
+        return($httpStatus[$statuskod]);
     }
 }
 ?>

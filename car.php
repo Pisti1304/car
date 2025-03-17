@@ -6,13 +6,13 @@ class Car{
     public function __construct(){
         $query = "SELECT c_id, c_desc, path FROM tb1_car";
         $dbvez = new DBVezerlo();
-        this->cars=$dbvez->executeSelectQuery($query);
+        $this->cars=$dbvez->executeSelectQuery($query);
         $dbvez->closeDB();
     }
     public function getAllcars(){
         return $this->cars;
     }
-    public getcardById($carId){
+    public function getcardById($carId){
         $query = "SELECT c_id, c_desc, path FROM tb1_car WHERE c_id =". $carId;
         $dbvez = new DBVezerlo();
         $this-> cars = $dbvez->executeSelectQuery($query);

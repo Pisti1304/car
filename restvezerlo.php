@@ -9,25 +9,23 @@ $view = $_GET["view"];
 switch($view)
 {
     case "all":
-        $Oscarrest = new $OscarrestKezelo();
-        $Oscarrest->getAllCars();
+        $Oscarrest = new CarrestKezelo();
+        $Oscarrest->getAllcars();
         break;
 
-    case  "single":
-        $Oscarrest = new $OscarrestKezelo();
-        $Oscarrest->getCarsById($_GET["c_id"]);
+    case "single":
+        $Oscarrest = new CarrestKezelo();
+        $Oscarrest->getcarById($_GET["c_id"]);
         break;
 
-    case  "single":
-            $Oscarrest = new $OscarrestKezelo();
-            $Oscarrest->getCarsByType($_GET["ct_desc"]);
-            break;
+    case "tipus":
+        $Oscarrest = new CarrestKezelo();
+        $Oscarrest->getcarsByType($_GET["ct_desc"]);
+        break;
 
     default:
-    $Oscarrest = new $OscarrestKezelo();
-    $Oscarrest->getFault();
-
-
+    $Oscarrest = new CarrestKezelo();
+    $Oscarrest->getFault();    
 }
 
 ?>

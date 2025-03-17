@@ -6,7 +6,7 @@ require 'car.php';
 class CarrestKezelo extends RestKezelo{
     function getAllcars(){
         $cars = new car();
-        $sorAdat = $car->getAllcars();
+        $sorAdat = $cars->getAllcars();
 
         if (empty($sorAdat)) {
             $statusCode=404;
