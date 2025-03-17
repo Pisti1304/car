@@ -26,9 +26,9 @@ class CarrestKezelo extends RestKezelo{
         echo $response;
     }
 
-    function getcarById($d_id){
+    function getcarById($c_id){
         $oscars = new Car();
-        $sorAdat = $oscars->getcarsById($c_id);
+        $sorAdat = $oscars->getcarById($c_id);
 
         if (empty($sorAdat)) {
             $statusCode=404;

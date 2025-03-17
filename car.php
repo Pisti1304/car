@@ -12,7 +12,7 @@ class Car{
     public function getAllcars(){
         return $this->cars;
     }
-    public function getcardById($carId){
+    public function getcarById($carId){
         $query = "SELECT c_id, c_desc, path FROM tb1_car WHERE c_id =". $carId;
         $dbvez = new DBVezerlo();
         $this-> cars = $dbvez->executeSelectQuery($query);
